@@ -1,0 +1,54 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Xcode
+DerivedData/
+*.xcuserstate
+*.xccheckout
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+timeline.xctimeline
+playground.xcworkspace
+xcuserdata/
+*.xcscmblueprint
+*.xcuserdatad
+build/
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+*.pem
+secrets.json
+google-services.json
+GoogleService-Info.plist
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Editors
+.idea/
+.vscode/
+*.swp

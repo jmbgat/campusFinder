@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A10000000000000000000040"
+               BlueprintIdentifier = "8F14A2B91C4E0A0012340050"
                BuildableName = "CampusPulse.app"
                BlueprintName = "CampusPulse"
                ReferencedContainer = "container:CampusPulse.xcodeproj">
@@ -39,11 +39,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <LocationScenarioReference
+         identifier = "CampusPulse/GeorgiaTech.gpx"
+         referenceType = "0">
+      </LocationScenarioReference>
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A10000000000000000000040"
+            BlueprintIdentifier = "8F14A2B91C4E0A0012340050"
             BuildableName = "CampusPulse.app"
             BlueprintName = "CampusPulse"
             ReferencedContainer = "container:CampusPulse.xcodeproj">
@@ -60,7 +64,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A10000000000000000000040"
+            BlueprintIdentifier = "8F14A2B91C4E0A0012340050"
             BuildableName = "CampusPulse.app"
             BlueprintName = "CampusPulse"
             ReferencedContainer = "container:CampusPulse.xcodeproj">

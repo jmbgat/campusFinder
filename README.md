@@ -4,9 +4,9 @@ See what’s happening around campus. Right now.
 
 CampusPulse is a native iOS app plus a FastAPI backend for Georgia Tech CS-4261 / CS-8803. Students post short-lived campus activities (free food, pickup sports, club tables, talks). Other students see those activities on a map and in a feed, with enough human-readable location detail to find the event after GPS gets them to the building.
 
-**Current development phase: Phase 0 (environment + skeletons)**
+**Current development phase: core iOS + local FastAPI (hosted backend still TODO)**
 
-This repository is intentionally incomplete. Feed, map pins, posting, and persistence are not implemented yet.
+Home, Map, Post, Saved, location, filters, and activity logging talk to the FastAPI backend. A physical iPhone still needs your Mac’s LAN IP or a hosted HTTPS URL in `APIConfig.swift`.
 
 ## Why this project exists
 
@@ -87,7 +87,7 @@ cd backend
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+uvicorn app.main:app --host 127.0.0.1 --port 8000
 ```
 
 Health check: http://127.0.0.1:8000/health  
@@ -108,12 +108,23 @@ A free Apple ID Personal Team is enough for class. You do **not** need App Store
 
 ## API configuration
 
-Not wired yet. In a later phase there will be one `APIConfig` (or similar) file with:
+Edit one file: `ios/CampusPulse/Services/APIConfig.swift`.
 
-- local development URL
-- deployed HTTPS URL
+- **Simulator:** keep `http://127.0.0.1:8000` and run uvicorn on your Mac first.
+- **Physical iPhone:** `127.0.0.1` is the phone, not your Mac. Put your Mac’s Wi-Fi IP, for example `http://192.168.1.12:8000`, or later the hosted HTTPS URL.
+- Local HTTP is allowed via `NSAllowsLocalNetworking` in `Info.plist`.
 
-A physical iPhone cannot use `http://127.0.0.1` on your Mac unless you set up extra networking. The graded multi-device demo should use a hosted HTTPS backend.
+## How to create an event
+
+1. Start the backend.
+2. Open the **Post** tab.
+3. Enter title, category, times, building/place, room/floor/details.
+4. Set the map pin with **Use Current Location** or a listed campus place (CULC, CRC, …). The app will not invent coordinates.
+5. Tap **Post event**. Home and Map should show it after refresh. Another device using the same backend will see it too.
+
+## How to test multi-device user-generated content
+
+Until the API is hosted, both devices must reach the same server URL in `APIConfig.swift`. Hosting (Render + PostgreSQL) is the remaining assignment piece.
 
 ## Partner collaboration (preview)
 
@@ -132,26 +143,28 @@ Another student should be able to:
 
 Do not have the partner rewrite architecture.
 
-## Known limitations (Phase 0)
+## Known limitations
 
-- No events, no map pins, no posting, no database
-- Backend is local-only
-- App icon is the default empty asset
-- GitHub remote depends on `gh` authentication (see setup notes in chat)
+- Backend is still local SQLite, not hosted PostgreSQL
+- Sample campus coordinates are approximate
+- Saved events are local to the device (UserDefaults), not an account
+- No authentication or push notifications yet
+- `--reload` on uvicorn + Python 3.14 can hang `/docs`; run without it
 
-## Future phases
+## Partner collaboration
 
-1. Event model + REST + SQLite  
-2. iOS feed + API client  
-3. Create event form  
-4. Core Location  
-5. MapKit  
-6. Building/room details  
-7. Filters  
-8. Hosted backend + two-device test  
-9. Activity logging  
-10. Polish / README screenshots  
-11. Optional auth / notifications only if the above works
+Safe partner changes:
+
+- Event card wording in `EventCardView.swift`
+- A category SF Symbol in `EventEnums.swift`
+- Empty-state copy
+- Button label on Post
+
+## Debugging notes
+
+- `/docs` hung while uvicorn `--reload` was wedged; `/health` still answered slowly. Restart without `--reload`.
+- Visiting `/` used to 404; it now redirects to `/docs`.
+- `create_all()` must import models first or SQLite has no tables.
 
 ## Debugging notes
 

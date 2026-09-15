@@ -3,24 +3,36 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		A10000000000000000000001 /* CampusPulseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000011 /* CampusPulseApp.swift */; };
-		A10000000000000000000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000012 /* ContentView.swift */; };
-		A10000000000000000000003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000013 /* Assets.xcassets */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
-		A10000000000000000000010 /* CampusPulse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampusPulse.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A10000000000000000000011 /* CampusPulseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusPulseApp.swift; sourceTree = "<group>"; };
-		A10000000000000000000012 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		A10000000000000000000013 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8F14A2B91C4E0A0012340001 /* CampusPulse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampusPulse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		8F14A2B91C4E0A0012340015 /* Exceptions for "CampusPulse" folder in "CampusPulse" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 8F14A2B91C4E0A0012340050 /* CampusPulse */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		8F14A2B91C4E0A0012340010 /* CampusPulse */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				8F14A2B91C4E0A0012340015 /* Exceptions for "CampusPulse" folder in "CampusPulse" target */,
+			);
+			path = CampusPulse;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
-		A10000000000000000000020 /* Frameworks */ = {
+		8F14A2B91C4E0A0012340020 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -30,28 +42,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A10000000000000000000030 = {
+		8F14A2B91C4E0A0012340030 = {
 			isa = PBXGroup;
 			children = (
-				A10000000000000000000031 /* CampusPulse */,
-				A10000000000000000000032 /* Products */,
+				8F14A2B91C4E0A0012340010 /* CampusPulse */,
+				8F14A2B91C4E0A0012340040 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		A10000000000000000000031 /* CampusPulse */ = {
+		8F14A2B91C4E0A0012340040 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A10000000000000000000011 /* CampusPulseApp.swift */,
-				A10000000000000000000012 /* ContentView.swift */,
-				A10000000000000000000013 /* Assets.xcassets */,
-			);
-			path = CampusPulse;
-			sourceTree = "<group>";
-		};
-		A10000000000000000000032 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A10000000000000000000010 /* CampusPulse.app */,
+				8F14A2B91C4E0A0012340001 /* CampusPulse.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,81 +61,84 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A10000000000000000000040 /* CampusPulse */ = {
+		8F14A2B91C4E0A0012340050 /* CampusPulse */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A10000000000000000000070 /* Build configuration list for PBXNativeTarget "CampusPulse" */;
+			buildConfigurationList = 8F14A2B91C4E0A0012340090 /* Build configuration list for PBXNativeTarget "CampusPulse" */;
 			buildPhases = (
-				A10000000000000000000050 /* Sources */,
-				A10000000000000000000020 /* Frameworks */,
-				A10000000000000000000060 /* Resources */,
+				8F14A2B91C4E0A0012340060 /* Sources */,
+				8F14A2B91C4E0A0012340020 /* Frameworks */,
+				8F14A2B91C4E0A0012340070 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				8F14A2B91C4E0A0012340010 /* CampusPulse */,
+			);
 			name = CampusPulse;
+			packageProductDependencies = (
+			);
 			productName = CampusPulse;
-			productReference = A10000000000000000000010 /* CampusPulse.app */;
+			productReference = 8F14A2B91C4E0A0012340001 /* CampusPulse.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A10000000000000000000080 /* Project object */ = {
+		8F14A2B91C4E0A0012340080 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
-					A10000000000000000000040 = {
+					8F14A2B91C4E0A0012340050 = {
 						CreatedOnToolsVersion = 16.4;
 					};
 				};
 			};
-			buildConfigurationList = A10000000000000000000071 /* Build configuration list for PBXProject "CampusPulse" */;
-			compatibilityVersion = "Xcode 15.0";
+			buildConfigurationList = 8F14A2B91C4E0A00123400A0 /* Build configuration list for PBXProject "CampusPulse" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = A10000000000000000000030;
-			productRefGroup = A10000000000000000000032 /* Products */;
+			mainGroup = 8F14A2B91C4E0A0012340030;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 8F14A2B91C4E0A0012340040 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A10000000000000000000040 /* CampusPulse */,
+				8F14A2B91C4E0A0012340050 /* CampusPulse */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A10000000000000000000060 /* Resources */ = {
+		8F14A2B91C4E0A0012340070 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A10000000000000000000003 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A10000000000000000000050 /* Sources */ = {
+		8F14A2B91C4E0A0012340060 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A10000000000000000000002 /* ContentView.swift in Sources */,
-				A10000000000000000000001 /* CampusPulseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		A10000000000000000000090 /* Debug */ = {
+		8F14A2B91C4E0A00123400B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -147,16 +152,17 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		A10000000000000000000091 /* Release */ = {
+		8F14A2B91C4E0A00123400B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -168,6 +174,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_VERSION = 5.0;
@@ -175,7 +182,7 @@
 			};
 			name = Release;
 		};
-		A10000000000000000000092 /* Debug */ = {
+		8F14A2B91C4E0A00123400C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -184,13 +191,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CampusPulse/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = CampusPulse;
-				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = NO;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "CampusPulse uses your location to show events and activities happening near you.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -201,13 +209,12 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
-		A10000000000000000000093 /* Release */ = {
+		8F14A2B91C4E0A00123400C1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -216,13 +223,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CampusPulse/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = CampusPulse;
-				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = NO;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "CampusPulse uses your location to show events and activities happening near you.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -233,9 +241,8 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -243,25 +250,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A10000000000000000000070 /* Build configuration list for PBXNativeTarget "CampusPulse" */ = {
+		8F14A2B91C4E0A0012340090 /* Build configuration list for PBXNativeTarget "CampusPulse" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A10000000000000000000092 /* Debug */,
-				A10000000000000000000093 /* Release */,
+				8F14A2B91C4E0A00123400C0 /* Debug */,
+				8F14A2B91C4E0A00123400C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A10000000000000000000071 /* Build configuration list for PBXProject "CampusPulse" */ = {
+		8F14A2B91C4E0A00123400A0 /* Build configuration list for PBXProject "CampusPulse" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A10000000000000000000090 /* Debug */,
-				A10000000000000000000091 /* Release */,
+				8F14A2B91C4E0A00123400B0 /* Debug */,
+				8F14A2B91C4E0A00123400B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = A10000000000000000000080 /* Project object */;
+	rootObject = 8F14A2B91C4E0A0012340080 /* Project object */;
 }

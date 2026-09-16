@@ -26,7 +26,7 @@ struct EventCardView: View {
                         Text(DistanceFormat.string(meters: meters))
                     }
                     Text(event.status().title)
-                    Text(endLabel)
+                    Text(timeLabel)
                 }
                 .font(.caption)
                 .foregroundStyle(.secondary)
@@ -41,7 +41,24 @@ struct EventCardView: View {
         .padding(.vertical, 4)
     }
 
-    private var endLabel: String {
-        "Ends \(event.endsAt.formatted(date: .omitted, time: .shortened))"
+    /// Upcoming events show when they start (the thing you need to plan around);
+    /// events already happening show when they end.
+    private var timeLabel: String {
+        switch event.status() {
+        case .upcoming:
+            "Starts \(Self.shortTime(event.startsAt))"
+        case .happeningNow:
+            "Ends \(Self.shortTime(event.endsAt))"
+        case .ended:
+            "Ended \(Self.shortTime(event.endsAt))"
+        }
+    }
+
+    /// "6:49 PM" today, otherwise "Wed 8:09 PM".
+    private static func shortTime(_ date: Date) -> String {
+        if Calendar.current.isDateInToday(date) {
+            return date.formatted(date: .omitted, time: .shortened)
+        }
+        return date.formatted(.dateTime.weekday(.abbreviated).hour().minute())
     }
 }

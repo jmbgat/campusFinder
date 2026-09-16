@@ -1,23 +1,15 @@
 # CampusPulse
 
-See what’s happening around campus. Right now.
+See what’s happening around campus.
 
-CampusPulse is a native iOS app plus a FastAPI backend for Georgia Tech CS-4261 / CS-8803. Students post short-lived campus activities (free food, pickup sports, club tables, talks). Other students see those activities on a map and in a feed, with enough human-readable location detail to find the event after GPS gets them to the building.
+CampusPulse is a native iOS app where students post campus activities (networking events, free food, pickup sports, club tables, talks). Other students see those activities on a map and in a feed, with enough human-readable location detail to find the event after GPS gets them to the building.
 
 **Current development phase: core iOS + local FastAPI (hosted backend still TODO)**
 
-Home, Map, Post, Saved, location, filters, and activity logging talk to the FastAPI backend. A physical iPhone still needs your Mac’s LAN IP or a hosted HTTPS URL in `APIConfig.swift`.
+Home, Map, Post, Saved, location, filters, and activity logging talk to the FastAPI backend. 
 
-## Why this project exists
+#need to do  the LAN IP of Mac in `APIConfig.swift` for phone.
 
-The course assignment asks for a working mobile + backend demo, source control, partner collaboration, and a physical-device run. I am using this project to learn:
-
-- SwiftUI navigation and forms
-- MapKit and Core Location
-- REST APIs with URLSession and async/await
-- FastAPI + a real database
-- Git collaboration with another student
-- Deploying a backend that phones can reach (not localhost)
 
 ## Architecture (planned)
 
@@ -102,7 +94,6 @@ Swagger: http://127.0.0.1:8000/docs
    Settings → General → VPN & Device Management → trust your Apple ID.
 5. The app should launch with Home / Map / Post / Saved tabs.
 
-A free Apple ID Personal Team is enough for class. You do **not** need App Store distribution.
 
 **Limitation found in Phase 0:** this Mac currently has no code-signing identities until you sign in to Xcode with an Apple ID. Do that before the physical-device demo.
 

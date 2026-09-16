@@ -37,7 +37,6 @@ Then open:
 - Health: http://127.0.0.1:8000/health
 - Swagger UI: http://127.0.0.1:8000/docs
 
-A physical iPhone cannot use `localhost` on your Mac for the final demo. We will deploy this service before multi-device testing.
 
 ## Database plan
 
